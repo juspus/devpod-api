@@ -1,17 +1,14 @@
-version: '3.8'
-
 services:
-  listener:
+  server:
     image: mcr.microsoft.com/dotnet/sdk:9.0
-    container_name: listener
     working_dir: /workspace
     volumes:
       - ./:/workspace:cached
     networks:
       - devnet
     ports:
-      - "5000:5000"
-    command: tail -f /dev/null  # we do the actual run via postStartCommand
+      - "5020:5020"
+    command: tail -f /dev/null
 
 networks:
   devnet:

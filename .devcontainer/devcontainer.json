@@ -1,0 +1,16 @@
+{
+  "name": "Server API (.NET9) – VS Code",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "server",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp"
+      ]
+    }
+  }
+}
